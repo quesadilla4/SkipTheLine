@@ -27,7 +27,7 @@
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:drawablePadding="8dp"
         android:ems="10"
-        android:fontFamily="@font/commissioner_Regular"
+        android:fontFamily="@font/commissioner_regular"
         android:hint="@android:string/search_go"
         android:inputType="textPersonName"
         android:paddingStart="16dp"
@@ -93,6 +93,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Skiplogo" />
+        app:srcCompat="@drawable/skiplogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
