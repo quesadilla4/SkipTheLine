@@ -23,4 +23,8 @@
     <string name="payments_show_name" translatable="false">Successfully received payment data for
         %s!
     </string>
+    <string name="title_activity_vendor">vendorActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
