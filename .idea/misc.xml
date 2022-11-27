@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/button_bg.xml" value="0.1" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1245" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/ic_baseline_dehaze_24.xml" value="0.1245" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/ic_baseline_filter_list_24.xml" value="0.1245" />
@@ -20,8 +21,11 @@
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/layout_bg.xml" value="0.247" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/search_bg.xml" value="0.1215" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/side_nav_bar.xml" value="0.25" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/text_bg.xml" value="0.2035" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/drawable/vie_bg.xml" value="0.1" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_checkout.xml" value="0.2" />
-        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_home_page.xml" value="0.2" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_home_page.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_main.xml" value="0.1757852077001013" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_order_summary.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/activity_side_bar.xml" value="0.25" />
@@ -32,9 +36,12 @@
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/fragment_map.xml" value="0.2151268115942029" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/fragment_slideshow.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/header_menu.xml" value="0.1" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/login_tab_frag.xml" value="0.1" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/nav_header_main.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/quick_items_row_item.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/restaurants_row_item.xml" value="0.18070652173913043" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/signup_tab_frag.xml" value="0.264" />
+        <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/layout/vie_bg.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/menu/main_menu.xml" value="0.264" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.247" />
         <entry key="..\:/Users/oshog/AndroidStudioProjects/SkipTheLine/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.247" />
