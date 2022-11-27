@@ -1,4 +1,4 @@
-package com.example.skiptheline.adapter;
+package com.example.skiptheline.model;
 
 public class Restaurants {
 
