@@ -89,6 +89,8 @@ public class HomePage extends AppCompatActivity {
         quickItemsList.add(new quickItems("Vanilla Latte\nPrep Time: 3-5 Minutes", R.drawable.latte,"Comma", "$7.49"));
 
         setQuickRecycler((quickItemsList));
+
+
     }
     private void setFoodRecycler(List<Restaurants> restaurantsList){
         foodRecycler = findViewById(R.id.food_recycler);
@@ -104,4 +106,5 @@ public class HomePage extends AppCompatActivity {
         quickItemsAdapter = new quickItemsAdapter(this, quickItemsList);
         quickRecycler.setAdapter(quickItemsAdapter);
     }
+
 }
