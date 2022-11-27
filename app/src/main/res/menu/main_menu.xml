@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- action button for cart
+    <item android:title="My Cart"
+        android:id="@+id/search"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"/>-->
+
+
 <group android:checkableBehavior="single">
     <item android:id="@+id/nav_orders" android:title="My Orders" android:icon="@drawable/ic_baseline_receipt_24" />
     <item android:id="@+id/nav_payment" android:title="Payment Methods" android:icon="@drawable/ic_baseline_payment_24"/>
     <item android:id="@+id/nav_help" android:title="FAQs" android:icon="@drawable/ic_baseline_help_24"/>
-
 </group>
+
 </menu>

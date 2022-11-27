@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.skiptheline">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,9 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkipTheLine"
         tools:targetApi="31">
+
+        <!-- This element is required to enable Google Pay in your app. -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAi8hNJ5R7sWq2SJDw1szOoWvi41hvQ3SI"></meta-data>
+            android:value="AIzaSyAi8hNJ5R7sWq2SJDw1szOoWvi41hvQ3SI" />
+
         <activity
             android:name=".OrderSummaryActivity"
             android:exported="true" />
@@ -24,10 +32,12 @@
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
-                android:value=""/>
+                android:value="" />
+
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
