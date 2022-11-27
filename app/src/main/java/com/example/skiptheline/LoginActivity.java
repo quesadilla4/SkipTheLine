@@ -3,7 +3,10 @@ package com.example.skiptheline;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -19,11 +22,16 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+       Intent intent2 = new Intent(LoginActivity.this, HomePage.class);
+      Intent intent3 = new Intent(LoginActivity.this, vendorActivity.class);
+       Button r = (Button) findViewById(R.id.loginbtn);
+        Button r2 = (Button) findViewById(R.id.vloginbtn);
+
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
         google = findViewById(R.id.fab_google);
         cwl = findViewById(R.id.fab_cwl);
-
+        //tabLayout.setupWithViewPager(viewPager,false);
         tabLayout.addTab(tabLayout.newTab().setText("Student/Staff"));
         tabLayout.addTab(tabLayout.newTab().setText("Vendor"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -47,5 +55,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+        /*r2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent3);
+            }
+        });*/
+
+
+
     }
+
 }

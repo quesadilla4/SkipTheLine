@@ -37,7 +37,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_summary);
         Button r = (Button) findViewById(R.id.returnToMain);
-        Intent intent1 = new Intent(OrderSummaryActivity.this, HomePage.class);
+        Intent intent2 = new Intent(OrderSummaryActivity.this, HomePage.class);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.ic_baseline_shopping_cart_24);
@@ -75,12 +75,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
         Fragment fragment = new MapFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
 
-        r.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(intent1);
-            }
-        });
+
 
 
 

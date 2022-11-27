@@ -6,13 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <EditText
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent=".8"
-        app:layout_constraintVertical_bias=".3"
-        app:layout_constraintHorizontal_bias=".5"
         android:background="@drawable/text_bg"
-        android:hint="Email"
+        android:hint="CWL Email"
         android:paddingLeft="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
@@ -20,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/email"></EditText>
+        app:layout_constraintVertical_bias="0.186"
+        app:layout_constraintWidth_percent=".8"></EditText>
 
     <EditText
         android:id="@+id/pass"

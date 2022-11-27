@@ -17,9 +17,9 @@ public class LoginTabFragment extends Fragment {
     EditText pass;
     TextView forgetpass;
     Button login;
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    float v=0;
+
+    public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_tab_frag, container, false);
 
         email = root.findViewById(R.id.email);
@@ -27,6 +27,21 @@ public class LoginTabFragment extends Fragment {
         forgetpass = root.findViewById(R.id.forgotpass);
         login = root.findViewById(R.id.loginbtn);
 
+
+        email.setTranslationX(800);
+        pass.setTranslationX(800);
+        login.setTranslationX(800);
+        forgetpass.setTranslationX(800);
+
+        email.setAlpha(v);
+        pass.setAlpha(v);
+        login.setAlpha(v);
+        forgetpass.setAlpha(v);
+
+        email.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(300).start();
+        pass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
+        forgetpass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
+        login.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
         return root;
     }
 }

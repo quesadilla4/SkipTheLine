@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.example.skiptheline.adapter.checkoutAdapter;
@@ -24,6 +27,8 @@ public class checkoutPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout_page);
+        Button b = (Button) findViewById(R.id.button2);
+        Intent intent1 = new Intent(checkoutPage.this, OrderSummaryActivity.class);
 
 
         List<checkout> checkoutList = new ArrayList<>();
@@ -33,6 +38,8 @@ public class checkoutPage extends AppCompatActivity {
         checkoutList.add(new checkout("Crispy Chicken Parm\nPrep Time: 5-10 Minutes", "$12.99"));
 
         checkoutRecycler((checkoutList));
+
+
     }
 
     private void checkoutRecycler(List<checkout> checkoutList) {
@@ -42,4 +49,6 @@ public class checkoutPage extends AppCompatActivity {
         checkoutAdapter = new checkoutAdapter(this, checkoutList);
         checkoutRecycler.setAdapter(checkoutAdapter);
     }
+
+
 }
