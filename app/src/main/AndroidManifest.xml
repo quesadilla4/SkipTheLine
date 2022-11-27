@@ -23,6 +23,11 @@
                 android:value="" />
         </activity>
 
+
+        <!-- This element is required to enable Google Pay in your app. -->
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAi8hNJ5R7sWq2SJDw1szOoWvi41hvQ3SI" />

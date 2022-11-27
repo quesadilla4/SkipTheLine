@@ -8,21 +8,16 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-
 import com.example.skiptheline.adapter.RestaurantsAdapter;
 import com.example.skiptheline.adapter.quickItemsAdapter;
 import com.example.skiptheline.model.Restaurants;
 import com.example.skiptheline.model.quickItems;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toolbar;
-
 import com.google.android.material.navigation.NavigationView;
 
 public class HomePage extends AppCompatActivity {
@@ -31,9 +26,8 @@ public class HomePage extends AppCompatActivity {
     quickItemsAdapter quickItemsAdapter;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
-    ActionBar actionBar;
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -48,7 +42,8 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.skiplogo);
+        getSupportActionBar().setIcon(R.drawable.ic_baseline_shopping_cart_24);
+        getSupportActionBar().setTitle("             Skip-The-Line");
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         drawerLayout = findViewById(R.id.drawer_layout);
