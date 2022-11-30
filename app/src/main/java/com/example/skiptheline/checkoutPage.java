@@ -39,7 +39,12 @@ public class checkoutPage extends AppCompatActivity {
 
         checkoutRecycler((checkoutList));
 
-
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent1);
+            }
+        });
     }
 
     private void checkoutRecycler(List<checkout> checkoutList) {

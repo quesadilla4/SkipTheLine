@@ -43,14 +43,11 @@ public class HomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        Intent intent1 = new Intent(HomePage.this, checkoutPage.class);
+        Intent intent3 = new Intent(HomePage.this, checkoutPage.class);
+        Intent intent4 = new Intent(HomePage.this, LoginActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_baseline_shopping_cart_24);
         getSupportActionBar().setTitle("             Skip-The-Line");
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigationView);
@@ -62,6 +59,12 @@ public class HomePage extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
+                    case R.id.cart:
+                        Log.i("MENU_DRAWER_TAG", "Cart item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(intent3);
+                        break;
+
                     case R.id.nav_orders:
                         Log.i("MENU_DRAWER_TAG", "Orders item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
@@ -74,6 +77,11 @@ public class HomePage extends AppCompatActivity {
                     case R.id.nav_help:
                         Log.i("MENU_DRAWER_TAG", "Help item is clicked");
                         drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.logout:
+                        Log.i("MENU_DRAWER_TAG", "Logout item is clicked");
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        startActivity(intent4);
                         break;
                 }
                 return true;

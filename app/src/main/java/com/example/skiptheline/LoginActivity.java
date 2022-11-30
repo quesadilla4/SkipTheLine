@@ -22,24 +22,29 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-       Intent intent2 = new Intent(LoginActivity.this, HomePage.class);
-      Intent intent3 = new Intent(LoginActivity.this, vendorActivity.class);
-       Button r = (Button) findViewById(R.id.loginbtn);
-        Button r2 = (Button) findViewById(R.id.vloginbtn);
+
+        Intent intent5 = new Intent(LoginActivity.this, vendorActivity.class);
+        Button q = (Button) findViewById(R.id.loginbtn);
+        Button q2 = (Button) findViewById(R.id.vloginbtn);
 
         tabLayout = findViewById(R.id.tab_layout);
         viewPager = findViewById(R.id.view_pager);
         google = findViewById(R.id.fab_google);
         cwl = findViewById(R.id.fab_cwl);
-        //tabLayout.setupWithViewPager(viewPager,false);
+
         tabLayout.addTab(tabLayout.newTab().setText("Student/Staff"));
         tabLayout.addTab(tabLayout.newTab().setText("Vendor"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
 
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(),this,tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setText("Student/Staff");
+        tabLayout.getTabAt(1).setText("Vendor");
 
         google.setTranslationY(300);
         cwl.setTranslationY(300);
@@ -55,10 +60,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        /*r2.setOnClickListener(new View.OnClickListener() {
+        /*q.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(intent3);
+                startActivity(intent4);
             }
         });*/
 

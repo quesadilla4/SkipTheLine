@@ -1,5 +1,6 @@
 package com.example.skiptheline;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ public class SignUpTabFragment extends Fragment {
         pass = root.findViewById(R.id.pass);
         forgetpass = root.findViewById(R.id.forgotpass);
         login = root.findViewById(R.id.vloginbtn);
+        Intent intent5 = new Intent(getActivity(), vendorActivity.class);
 
 
         email.setTranslationX(800);
@@ -42,6 +44,13 @@ public class SignUpTabFragment extends Fragment {
         pass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         forgetpass.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(500).start();
         login.animate().translationX(0).alpha(1).setDuration(800).setStartDelay(700).start();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent5);
+            }
+        });
         return root;
 
 

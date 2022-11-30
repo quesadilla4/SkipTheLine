@@ -10,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -28,15 +30,28 @@ public class MapFragment extends Fragment {
         supportMapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(@NonNull GoogleMap googleMap) {
-            googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                LatLng target = new LatLng(49.940147, -119.396516);
+                CameraPosition position = CameraPosition
+                        .builder()
+                        .target(target)
+                        .zoom(16)
+                        .build();
+                CameraUpdate cameraUpdate = CameraUpdateFactory.newCameraPosition(position);
+                googleMap.moveCamera(cameraUpdate);
+
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.position(target);
+                googleMap.addMarker(markerOptions);
+
+                googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override
                 public void onMapClick(@NonNull LatLng latLng) {
-                    MarkerOptions markerOptions = new MarkerOptions();
+                    /*MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(latLng);
                     markerOptions.title(latLng.latitude + " KG " + latLng.longitude);
                     googleMap.clear();
                     googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,20));
-                    googleMap.addMarker(markerOptions);
+                    googleMap.addMarker(markerOptions);*/
                 }
             });
             }

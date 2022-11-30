@@ -24,14 +24,12 @@ public class OrderSummaryActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
 
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+   /* public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
+    }*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +37,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
         Button r = (Button) findViewById(R.id.returnToMain);
         Intent intent2 = new Intent(OrderSummaryActivity.this, HomePage.class);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        /*getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.ic_baseline_shopping_cart_24);
         getSupportActionBar().setTitle("            Status");
         getSupportActionBar().setDisplayUseLogoEnabled(true);
@@ -70,12 +68,17 @@ public class OrderSummaryActivity extends AppCompatActivity {
                 }
                 return true;
             }
-        });
+        });*/
 
         Fragment fragment = new MapFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, fragment).commit();
 
-
+        r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent2);
+            }
+        });
 
 
 
