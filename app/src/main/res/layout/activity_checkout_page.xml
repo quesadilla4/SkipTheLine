@@ -103,18 +103,31 @@
         app:layout_constraintTop_toTopOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonCheckoutUBC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="94dp"
 
-        android:layout_marginEnd="95dp"
-        android:layout_marginBottom="60dp"
-        android:text="Continue to Checkout"
+
+        android:layout_marginBottom="16dp"
+        android:text="Checkout with UBC Card"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCheckoutCredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Checkout with Credit/Debit Card"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/buttonCheckoutUBC"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/OrangeButton"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

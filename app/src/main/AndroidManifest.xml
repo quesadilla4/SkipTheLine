@@ -14,6 +14,20 @@
         android:theme="@style/Theme.SkipTheLine"
         tools:targetApi="31">
         <activity
+            android:name=".CheckoutWithCreditActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CheckoutWithUBCActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".VendorAnalyticsActivity"
             android:exported="false">
             <meta-data
@@ -30,7 +44,6 @@
         <activity
             android:name=".checkoutPage"
             android:exported="true" />
-
         <activity
             android:name=".LoginActivity"
             android:exported="true"
@@ -41,7 +54,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".OrderSummaryActivity"
             android:exported="true" /> <!-- This element is required to enable Google Pay in your app. -->
@@ -52,10 +64,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAi8hNJ5R7sWq2SJDw1szOoWvi41hvQ3SI" />
-
         <meta-data
             android:name="android.app.lib_name"
             android:value="" />

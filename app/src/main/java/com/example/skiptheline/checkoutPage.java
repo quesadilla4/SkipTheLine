@@ -7,16 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.skiptheline.adapter.checkoutAdapter;
 import com.example.skiptheline.model.checkout;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class checkoutPage extends AppCompatActivity {
@@ -28,9 +24,10 @@ public class checkoutPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout_page);
-        Button b = (Button) findViewById(R.id.button2);
-        Intent intent1 = new Intent(checkoutPage.this, OrderSummaryActivity.class);
-
+        Button b = (Button) findViewById(R.id.buttonCheckoutUBC);
+        Button b2 = (Button) findViewById(R.id.buttonCheckoutCredit);
+        Intent intent1 = new Intent(checkoutPage.this, CheckoutWithUBCActivity.class);
+        Intent intent2 = new Intent(checkoutPage.this, CheckoutWithCreditActivity.class);
         //set static textviews that will be updated in checkout adapter
         tvSubtotal = findViewById(R.id.textView10);
         tvTax = findViewById(R.id.textView11);
@@ -47,7 +44,16 @@ public class checkoutPage extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                intent1.putExtra("total",tvTotal.getText());
                 startActivity(intent1);
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent2.putExtra("total",tvTotal.getText());
+                startActivity(intent2);
             }
         });
     }

@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class LoginTabFragment extends Fragment {
@@ -22,10 +20,10 @@ public class LoginTabFragment extends Fragment {
 
     public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.login_tab_frag, container, false);
-        email = root.findViewById(R.id.email);
+        email = root.findViewById(R.id.cardHolderNameTV);
         pass = root.findViewById(R.id.pass);
         forgetpass = root.findViewById(R.id.forgotpass);
-        login = root.findViewById(R.id.loginbtn);
+        login = root.findViewById(R.id.payCreditCardBtn);
         Intent intent5 = new Intent(getActivity(), HomePage.class);
 
         email.setTranslationX(800);

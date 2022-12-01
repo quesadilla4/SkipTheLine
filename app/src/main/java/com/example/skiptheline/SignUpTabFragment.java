@@ -23,7 +23,7 @@ public class SignUpTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,  ViewGroup container, Bundle savedInstanceState) {
        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.signup_tab_frag, container, false);
 
-        email = root.findViewById(R.id.email);
+        email = root.findViewById(R.id.cardHolderNameTV);
         pass = root.findViewById(R.id.pass);
         forgetpass = root.findViewById(R.id.forgotpass);
         login = root.findViewById(R.id.vloginbtn);
