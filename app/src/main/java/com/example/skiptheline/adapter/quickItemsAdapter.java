@@ -4,13 +4,17 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.skiptheline.HomePage;
 import com.example.skiptheline.R;
+import com.example.skiptheline.model.checkout;
 import com.example.skiptheline.model.quickItems;
 
 import java.util.List;
@@ -40,6 +44,14 @@ public class quickItemsAdapter extends RecyclerView.Adapter<quickItemsAdapter.Qu
         holder.name.setText(quickItemsList.get(position).getName());
         holder.price.setText(quickItemsList.get(position).getPrice());
         holder.restaurantName.setText(quickItemsList.get(position).getRestaurantName());
+        holder.bAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(context, "Added item num"+position, Toast.LENGTH_SHORT).show();
+                HomePage.listOfAddedItems.add(new checkout(holder.name.getText().toString(), holder.price.getText().toString()));
+                HomePage.cartSum+=Double.parseDouble(holder.price.getText().toString().substring(1));
+            }
+        });
 
     }
 
@@ -53,6 +65,7 @@ public class quickItemsAdapter extends RecyclerView.Adapter<quickItemsAdapter.Qu
 
         ImageView foodImage;
         TextView name, price, restaurantName;
+        ImageButton bAdd;
 
         public QuickItemsViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -61,7 +74,7 @@ public class quickItemsAdapter extends RecyclerView.Adapter<quickItemsAdapter.Qu
             name = itemView.findViewById(R.id.food_name);
             price = itemView.findViewById(R.id.price);
             restaurantName = itemView.findViewById(R.id.restaurantName);
-
+            bAdd = itemView.findViewById(R.id.imageButton3);
         }
     }
 

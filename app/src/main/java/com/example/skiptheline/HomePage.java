@@ -14,6 +14,7 @@ import android.os.Bundle;
 import com.example.skiptheline.adapter.RestaurantsAdapter;
 import com.example.skiptheline.adapter.quickItemsAdapter;
 import com.example.skiptheline.model.Restaurants;
+import com.example.skiptheline.model.checkout;
 import com.example.skiptheline.model.quickItems;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +32,8 @@ public class HomePage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
-
-
+    public static  ArrayList<checkout> listOfAddedItems;
+    public static  double cartSum;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(actionBarDrawerToggle.onOptionsItemSelected(item)) {
@@ -43,6 +44,9 @@ public class HomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //initialize static arrays to get cart items
+        listOfAddedItems = new ArrayList<>();
+        cartSum =0.0;
         Intent intent3 = new Intent(HomePage.this, checkoutPage.class);
         Intent intent4 = new Intent(HomePage.this, LoginActivity.class);
         super.onCreate(savedInstanceState);
