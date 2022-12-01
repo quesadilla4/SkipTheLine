@@ -1,6 +1,7 @@
 package com.example.skiptheline.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skiptheline.R;
+import com.example.skiptheline.ShowRestaurantItemsActivity;
 import com.example.skiptheline.model.Restaurants;
 
 public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.RestaurantsViewHolder> {
@@ -38,7 +40,14 @@ public class RestaurantsAdapter extends RecyclerView.Adapter<RestaurantsAdapter.
 
         holder.foodImage.setImageResource(RestaurantsList.get(position).getImageUrl());
         holder.name.setText(RestaurantsList.get(position).getName());
-
+        holder.foodImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ShowRestaurantItemsActivity.class);
+                intent.putExtra("restaurantName",holder.name.getText().toString());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
