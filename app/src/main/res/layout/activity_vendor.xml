@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonHome"
         android:layout_width="38dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -63,10 +63,10 @@
         android:text="Home"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/imageButton2"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonHome"
         app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintStart_toStartOf="@+id/imageButtonHome"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonHome" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -76,7 +76,7 @@
         android:layout_marginTop="92dp"
         android:background="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonHome"
         app:srcCompat="@drawable/ic_round_fastfood_24" />
 
     <TextView
@@ -112,7 +112,7 @@
         android:fontFamily="@font/commissioner_semibold"
         android:text="Menu"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonStats"
         app:layout_constraintEnd_toEndOf="@+id/imageButton4"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="@+id/imageButton4"
@@ -120,7 +120,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButtonStats"
         android:layout_width="38dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -138,13 +138,13 @@
         android:fontFamily="@font/commissioner_semibold"
         android:text="Statistics"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonStats"
         app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonStats"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imageButtonLogOut"
         android:layout_width="38dp"
         android:layout_height="43dp"
         android:layout_marginStart="12dp"
@@ -155,15 +155,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_round_logout_24" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="338dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView27"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/textView20"
@@ -178,17 +170,6 @@
         app:layout_constraintStart_toEndOf="@+id/divider2"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/commissioner_bold"
-        android:text="Sales:"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/textView26" />
 
     <TextView
         android:id="@+id/textView24"
@@ -294,13 +275,5 @@
         app:layout_constraintStart_toStartOf="@+id/checkBox2"
         app:layout_constraintTop_toTopOf="@+id/textView25" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="300dp"
-        android:layout_height="206dp"
-        android:layout_marginBottom="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView27"
-        app:srcCompat="@drawable/charts" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
