@@ -1,6 +1,8 @@
 package com.example.skiptheline.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skiptheline.HomePage;
 import com.example.skiptheline.R;
+import com.example.skiptheline.ShowItemActivity;
 import com.example.skiptheline.model.checkout;
 import com.example.skiptheline.model.quickItems;
 
@@ -50,6 +53,21 @@ public class quickItemsAdapter extends RecyclerView.Adapter<quickItemsAdapter.Qu
                 //Toast.makeText(context, "Added item num"+position, Toast.LENGTH_SHORT).show();
                 HomePage.listOfAddedItems.add(new checkout(holder.name.getText().toString(), holder.price.getText().toString()));
                 HomePage.cartSum+=Double.parseDouble(holder.price.getText().toString().substring(1));
+            }
+        });
+
+        holder.foodImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle dataBundle = new Bundle();
+                dataBundle.putInt("imageUrl",quickItemsList.get(position).getImageUrl());
+                dataBundle.putString("itemName",quickItemsList.get(position).getName());
+                dataBundle.putString("itemPrice",quickItemsList.get(position).getPrice());
+                dataBundle.putString("restaurantName",quickItemsList.get(position).getRestaurantName());
+
+                Intent intent = new Intent(context, ShowItemActivity.class);
+                intent.putExtras(dataBundle);
+                context.startActivity(intent);
             }
         });
 

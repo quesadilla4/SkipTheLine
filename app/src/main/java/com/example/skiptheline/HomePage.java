@@ -19,9 +19,12 @@ import com.example.skiptheline.model.quickItems;
 import java.util.ArrayList;
 import java.util.List;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.Toolbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -37,6 +40,12 @@ public class HomePage extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        else if(item.getItemId() == R.id.cartOnHome)
+        {
+            Intent intent3 = new Intent(HomePage.this, checkoutPage.class);
+            startActivity(intent3);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -87,6 +96,7 @@ public class HomePage extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         startActivity(intent4);
                         break;
+
                 }
                 return true;
             }
@@ -124,6 +134,13 @@ public class HomePage extends AppCompatActivity {
         quickRecycler.setLayoutManager(layoutManager);
         quickItemsAdapter = new quickItemsAdapter(this, quickItemsList);
         quickRecycler.setAdapter(quickItemsAdapter);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_cart, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
 }

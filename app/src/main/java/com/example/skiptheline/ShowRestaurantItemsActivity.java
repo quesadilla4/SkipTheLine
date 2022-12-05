@@ -1,11 +1,15 @@
 package com.example.skiptheline;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.skiptheline.adapter.RestaurantsAdapter;
@@ -73,5 +77,21 @@ public class ShowRestaurantItemsActivity extends AppCompatActivity {
         quickRecycler.setLayoutManager(layoutManager);
         quickItemsAdapter = new quickItemsAdapter(this, quickItemsList);
         quickRecycler.setAdapter(quickItemsAdapter);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_cart, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.cartOnHome)
+        {
+            Intent intent3 = new Intent(ShowRestaurantItemsActivity.this, checkoutPage.class);
+            startActivity(intent3);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
